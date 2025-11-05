@@ -1,0 +1,28 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/mixins.scss';
+@import '../../../../../styles/animations.scss';
+
+.container {
+  padding: $spacing-xl;
+  max-width: 28rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: $spacing-md;
+  color: $foreground;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.emptyState {
+  padding: $spacing-xl;
+  max-width: 28rem;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $foreground;
+}
+

@@ -1,0 +1,42 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+@import '../styles/animations.scss';
+
+.container {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-bottom: $spacing-md;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.errors {
+  margin-bottom: 2.5rem;
+  color: $destructive;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.errorItem {
+  margin-bottom: $spacing-xs;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.buttons {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: $spacing-md;
+}
+
+.resetButton {
+  @include button-base;
+  @include hover-lift;
+}
+
+

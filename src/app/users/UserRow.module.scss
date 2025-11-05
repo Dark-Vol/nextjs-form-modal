@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
+
+.row {
+  cursor: pointer;
+  @include transition(all, 0.2s);
+  animation: fadeInUp 0.3s ease-out;
+  
+  &:hover {
+    background-color: hsl(0 0% 98%);
+    transform: translateX(4px);
+  }
+  
+  &:active {
+    transform: translateX(2px);
+  }
+}
+
+.cell {
+  @include transition(all, 0.2s);
+}
+

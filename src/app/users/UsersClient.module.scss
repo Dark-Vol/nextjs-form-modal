@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
+
+.container {
+  padding: $spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.header {
+  @include flex-between;
+  margin-bottom: $spacing-lg;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.addButton {
+  @include button-base;
+  @include hover-lift;
+}
+
+.filtersContainer {
+  margin-bottom: $spacing-lg;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.tableWrapper {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.emptyState {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $muted-foreground;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@include responsive(mobile) {
+  .container {
+    padding: $spacing-md;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: $spacing-md;
+    align-items: stretch;
+  }
+}
+

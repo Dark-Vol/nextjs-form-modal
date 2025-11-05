@@ -1,0 +1,104 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+@import '../../../styles/animations.scss';
+
+.container {
+  padding: $spacing-xl;
+  max-width: 42rem;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.backButton {
+  margin-bottom: $spacing-lg;
+  @include hover-lift;
+}
+
+.card {
+  background: white;
+  border-radius: $radius-lg;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: $spacing-lg;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.header {
+  @include flex-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-lg;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: $foreground;
+}
+
+.editButton {
+  @include button-base;
+  @include hover-lift;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.detailItem {
+  border-bottom: 1px solid $border;
+  padding-bottom: $spacing-md;
+  
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(25 5.3% 44.7%);
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.value {
+  font-size: 1.125rem;
+  margin-top: $spacing-xs;
+  color: $foreground;
+}
+
+.emptyState {
+  background: white;
+  border-radius: $radius-lg;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: $spacing-lg;
+  text-align: center;
+  animation: scaleIn 0.3s ease-out;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: $spacing-md;
+  color: $foreground;
+}
+
+.emptyText {
+  color: hsl(25 5.3% 44.7%);
+  margin-bottom: $spacing-lg;
+}
+
+@include responsive(mobile) {
+  .container {
+    padding: $spacing-md;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: $spacing-md;
+    align-items: stretch;
+  }
+}
+
